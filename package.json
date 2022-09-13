@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-tallersi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Itadoriii/Proyecto-TallerSI.git"
+  },
+  "author": "Itadoriii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Itadoriii/Proyecto-TallerSI/issues"
+  },
+  "homepage": "https://github.com/Itadoriii/Proyecto-TallerSI#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
