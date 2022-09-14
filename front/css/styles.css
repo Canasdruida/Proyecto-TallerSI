@@ -730,7 +730,7 @@ footer {
 }
 
 .banner-cover {
-    background-image: url(../imgnew/cropped-Logo_web_packfull-120x52.png);
+    background-image: url(../imgnew/packfullportada.jpg);
     height: 100vh;
 }
 
@@ -756,12 +756,12 @@ footer {
 }
 
 .banner-cover {
-    background-image: url(../imgnew/cropped-Logo_web_packfull-120x52.png);
+    background-image: url(../imgnew/packfullportadagrande.jpg);
     height: 100vh;
 }
 
 .banner-second {
-    background-image: url(../imgnew/cropped-Logo_web_packfull-120x52.png);
+    background-image: url(../imgnew/packfullportadagrande.jpg);
     height: 50vh;
     margin-bottom: 1rem;
     position: relative;
@@ -799,7 +799,7 @@ footer {
 @media screen and (min-width: 1023px) {
     /* AQUI SE CAMBIA LA IMAGEN DE FONDO */
     .banner-cover {
-        background-image: url(../img/banner-large.jpg);
+        background-image: url(../imgnew/packfullportadagrande.jpg);
     }
 }
 

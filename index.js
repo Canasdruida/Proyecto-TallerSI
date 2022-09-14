@@ -8,82 +8,60 @@ const productos = [
         id:1,
         name: "Calendario 1",
         precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        imagen: "imgnew/productos/calendario1.jpg",
         stock: 30,
         descripcion: "calendario"
     },
     {
         id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        name: "Caja AMONG US",
+        precio: 12000,
+        imagen: "imgnew/productos/caja amongus.png",
+        stock: 30,
+        descripcion: "100 cajas, precio efectivo",
+        tipo: "caja"
+    },
+    {
+        id:1,
+        name: "Papel antigrasa",
+        precio: 7000,
+        imagen: "imgnew/productos/papel antigrasa.png",
         stock: 30,
         descripcion: "calendario"
     },
     {
         id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        name: "Caja Spiderman",
+        precio: 13000,
+        imagen: "imgnew/productos/caja spiderman.png",
         stock: 30,
         descripcion: "calendario"
     },
     {
         id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        name: "Funda vasos",
+        precio: 9000,
+        imagen: "imgnew/productos/fundas para vasos.jpg",
         stock: 30,
         descripcion: "calendario"
     },
     {
         id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        name: "Autoarmables",
+        precio: 7000,
+        imagen: "imgnew/productos/autoarmables.png",
         stock: 30,
         descripcion: "calendario"
     },
     {
         id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
-        stock: 30,
-        descripcion: "calendario"
-    },
-    {
-        id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
-        stock: 30,
-        descripcion: "calendario"
-    },
-    {
-        id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
-        stock: 30,
-        descripcion: "calendario"
-    },
-    {
-        id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
-        stock: 30,
-        descripcion: "calendario"
-    },
-    {
-        id:1,
-        name: "Calendario 1",
-        precio: 50,
-        imagen: "imgnew/calendario1.jpg",
+        name: "Caja Generica",
+        precio: 7000,
+        imagen: "imgnew/productos/caja generica.jpg",
         stock: 30,
         descripcion: "calendario"
     }
+    
 ]
 
 app.get('/api/productos', (req, res) => {

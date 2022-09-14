@@ -15,9 +15,8 @@ function displayProducts(productList) {
         `<div class="card">
         <img src="${element.imagen}" alt="${element.name}" style="width:100%">
         <h1>${element.name}</h1>
-        <p class="price">$19.99</p>
-        <p>${element.descripcion}</p>
-        <p><button>Add to Cart</button></p>
+        <p>$${element.precio}</p>
+        <p><button>Añadir al carrito</button></p>
         </div>`
     });
     document.getElementById('page-content').innerHTML = productsHTML;
