@@ -21,11 +21,26 @@ function displayProducts(productList) {
     });
     document.getElementById('page-content').innerHTML = productsHTML;
 }
+
 window.onload = async()=>{
 	const productos = await(await fetch("/api/productos")).json();
 	console.log(productos);
 	displayProducts(productos);
 } 	
+
+/* funcion para login 
+function iniciarsesion(){
+    console.log("hola mundo");
+   }
+// si se clickea el boton de iniciar sesion se ejecuta la funcion 
+document.getElementById("botonreg").onclick = function (){
+       iniciarsesion();
+   }*/
+
+
+
+
+
 // script del menu responsive Abrir el menu
 var btnMobile = document.getElementById('btn-mobile')
 btnMobile.addEventListener('click', function (e) {
@@ -96,18 +111,4 @@ function previus() {
 }
 
 
-// script de la navegacipon por tabs
-let tabs = Array.prototype.slice.apply(document.querySelectorAll('.tabs-item'))
-let panels = Array.prototype.slice.apply(document.querySelectorAll('.tab-panel'))
-
-document.getElementById('tabs').addEventListener('click', e => {
-    if (e.target.classList.contains('tabs-item')) {
-        let i = tabs.indexOf(e.target)
-        tabs.map(tab => tab.classList.remove('active-tab'))
-        tabs[i].classList.add('active-tab')
-        panels.map(panel => panel.classList.remove('active-panel'))
-        panels[i].classList.add('active-panel')
-    }
-
-})
 
