@@ -28,14 +28,7 @@ window.onload = async()=>{
 	displayProducts(productos);
 } 	
 
-/* funcion para login 
-function iniciarsesion(){
-    console.log("hola mundo");
-   }
-// si se clickea el boton de iniciar sesion se ejecuta la funcion 
-document.getElementById("botonreg").onclick = function (){
-       iniciarsesion();
-   }*/
+
 
 
 
