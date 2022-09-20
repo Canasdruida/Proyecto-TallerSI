@@ -16,7 +16,7 @@ function displayProducts(productList) {
         <img src="${element.imagen}" alt="${element.name}" style="width:100%">
         <h1>${element.name}</h1>
         <p>$${element.precio}</p>
-        <p><button>Añadir al carrito</button></p>
+        <p><button onclick="addcart('${element.name}','${element.precio}')">Añadir al carrito</button></p>
         </div>`
     });
     document.getElementById('page-content').innerHTML = productsHTML;
@@ -27,7 +27,18 @@ window.onload = async()=>{
 	console.log(productos);
 	displayProducts(productos);
 } 	
+const carrito = []
 
+function addcart(name,precio){
+    
+    let productoadd = [];
+    productoadd.push(name,precio,1);
+    carrito.push(productoadd);
+    console.log(carrito);
+    
+    
+
+}
 
 
 
