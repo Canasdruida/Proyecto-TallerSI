@@ -16,7 +16,7 @@ function displayProducts(productList) {
         <img src="${element.imagen}" alt="${element.name}" style="width:100%">
         <h1>${element.name}</h1>
         <p>$${element.precio}</p>
-        <p><button onclick="addcart('${element.name}','${element.precio}')">Añadir al carrito</button></p>
+        <p><button onclick="addcart('${element.name}','${element.precio}')" id="botoncarrito" >Añadir al carrito</button></p>
         </div>`
     });
     document.getElementById('page-content').innerHTML = productsHTML;
@@ -27,19 +27,47 @@ window.onload = async()=>{
 	console.log(productos);
 	displayProducts(productos);
 } 	
+
+// array que almacena los productos seleccionados 
 const carrito = []
 
-function addcart(name,precio){
-    
-    let productoadd = [];
-    productoadd.push(name,precio,1);
-    carrito.push(productoadd);
-    console.log(carrito);
-    
-    
+//funcion que suma cantidad 
 
+function sumarcarrito(name){
+    for (i = 0; i < carrito.length; i++) {
+        if(name==carrito[i][0]){
+            carrito[i][2] = carrito[i][2] + 1;
+            };
+        };
+    console.log(carrito);
 }
 
+//funcion que añade al carrito 
+
+function addcart(name,precio){
+    let aceptar = true;
+    if(carrito.length>0){
+        for (i = 0; i < carrito.length; i++) {
+            if(name==carrito[i][0]){
+                aceptar = false; 
+                };
+            };
+        if(aceptar==false){
+            sumarcarrito(name);
+        }else {
+            let productoadd = [];
+            productoadd.push(name,precio,1);
+            carrito.push(productoadd);
+            console.log(carrito);
+        };
+    }
+    if(carrito.length==0){
+        let productoadd = [];
+        productoadd.push(name,precio,1);
+        carrito.push(productoadd);
+        console.log(carrito);
+    };   
+}
 
 
 
