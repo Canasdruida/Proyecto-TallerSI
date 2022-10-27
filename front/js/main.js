@@ -2,24 +2,19 @@
 let products = [];
 let total = 0;
 
-function add(product, price) {
-    console.log(product, price);
-    products.push(product);
-    total = total + price;
-    
-}
 function displayProducts(productList) {
     let productsHTML = '';
     productList.forEach(element => {
         productsHTML +=
-        `<div class="card">
+        `<div class="card" id="${element.name}">
         <img src="${element.imagen}" alt="${element.name}" style="width:100%">
         <h1>${element.name}</h1>
         <p>$${element.precio}</p>
-        <p><button onclick="addcart('${element.name}','${element.precio}')" id="botoncarrito" >Añadir al carrito</button></p>
+        <p><button onclick="displayInformation('${element.name}','${element.imagen}','${element.precio}','${element.descripcion}')" id="botoncarrito" >Detalles del Producto</button></p>
         </div>`
     });
     document.getElementById('page-content').innerHTML = productsHTML;
+
 }
 
 window.onload = async()=>{
@@ -28,51 +23,24 @@ window.onload = async()=>{
 	displayProducts(productos);
 } 	
 
-// array que almacena los productos seleccionados 
-const carrito = []
-
-//funcion que suma cantidad 
-
-function sumarcarrito(name){
-    for (i = 0; i < carrito.length; i++) {
-        if(name==carrito[i][0]){
-            carrito[i][2] = carrito[i][2] + 1;
-            };
-        };
-    console.log(carrito);
+function displayInformation(name,imagen,precio,descripcion,){
+    let informacion = "";
+    console.log(name);
+    console.log(imagen);
+    informacion +=
+        `<div class ="product">
+            <div class ="img-producto">
+            <img src="${imagen}" alt="${name}" style="width:100%">
+            </div>
+            <div class ="informacion">
+            <h1>${name}</h1>
+            <h2>Precio unitario neto:${precio}</h2>
+            <h2>Descripcion:${descripcion}</h2>
+            </div>
+        </div>`
+	document.getElementById('page-content').innerHTML = informacion;
+    
 }
-
-//funcion que añade al carrito 
-
-function addcart(name,precio){
-    let aceptar = true;
-    if(carrito.length>0){
-        for (i = 0; i < carrito.length; i++) {
-            if(name==carrito[i][0]){
-                aceptar = false; 
-                };
-            };
-        if(aceptar==false){
-            sumarcarrito(name);
-        }else {
-            let productoadd = [];
-            productoadd.push(name,precio,1);
-            carrito.push(productoadd);
-            console.log(carrito);
-        };
-    }
-    if(carrito.length==0){
-        let productoadd = [];
-        productoadd.push(name,precio,1);
-        carrito.push(productoadd);
-        console.log(carrito);
-    };   
-}
-
-
-
-
-
 // script del menu responsive Abrir el menu
 var btnMobile = document.getElementById('btn-mobile')
 btnMobile.addEventListener('click', function (e) {

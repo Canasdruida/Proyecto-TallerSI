@@ -44,3 +44,17 @@
   max-height: 300px;
   
 }
+.product div{
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.img-producto img{
+
+  max-width: 500px;
+  min-width: 500px;
+  min-height: 500px;
+  max-height: 500px;
+}
+
